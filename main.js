@@ -117,9 +117,33 @@ answerFive.appendChild(document.createTextNode(item.title + " has " + item.mater
 
 matMore.forEach(function (item) {
 	answerFive.appendChild(document.createTextNode(item.materials + '\n\n\n'));
+
 });
 
 
+
+// Question 6
+
+// 18 were made by their sellers
+// who_made: "i_did"
+
+
+
+var meMade = items.filter(function (item){
+	if( item.who_made === "i_did")
+		return item.who_made;
+	});
+
+
+
+document.querySelector('#answer6').textContent = ( meMade.length + " were made by their sellers");
+
+
+
+
+//madeMade.forEach( function(item){
+//	console.log(made);
+//});
 
 
 
